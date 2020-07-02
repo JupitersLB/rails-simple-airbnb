@@ -1,0 +1,34 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @flat.picture_url %>);">
+</div>
+
+<div class="row">
+  <div class="col-8">
+    <div class="card margin-top-negative light-boxshadow">
+      <div class="card-body text-left">
+        <h3 class="card-title"><%= @flat.name %></h3>
+        <h6 class="card-subtitle mb-2 text-muted"><%= @flat.address %></h6>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card margin-top-negative light-boxshadow">
+      <div class="card-body text-left">
+        <h3>Details</h3>
+        <p><%= @flat.number_of_guests %></p>
+        <p><%= @flat.price_per_night %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8">
+    <div class="card mt-n4 light-boxshadow">
+      <div class="card-body text-left">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

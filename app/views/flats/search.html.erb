@@ -1,0 +1,8 @@
+<h1>All our flats</h1>
+<p>You searched for <strong><%= @search_keyword %></strong>. We found <%= @flats.count %> on our website.</p>
+
+<div class="row mt-5">
+  <div class="col text-center">
+    <%= render 'flats/flat-cards' %>
+  </div>
+</div>

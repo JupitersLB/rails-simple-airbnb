@@ -1,0 +1,24 @@
+<div class="my-card-deck">
+    <% @flats.each do |flat| %>
+      <div class="card" style="box-shadow: 1px 1px 12px 4px rgba(100, 100, 100, .2);">
+        <img src="<%= flat.picture_url %>" class="card-img-top" alt="house">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <i class="material-icons mr-2">people</i>
+          <p class="card-text"><%= flat.number_of_guests %></p>
+          <i class="material-icons mr-2">euro_symbol</i>
+          <p class="card-text"><%= flat.price_per_night %></p>
+        </div>
+        <div class="card-footer">
+          <%= link_to 'More info', flat_path(flat), class: 'btn btn-outline-dark' %>
+          <%= link_to 'Edit', edit_flat_path(flat), class: 'btn btn-outline-dark' %>
+          <%= link_to 'Delete',
+                        flat_path(flat),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" },
+                        class: 'btn btn-outline-dark' %>
+        </div>
+      </div>
+    <% end %>
+    </div>
