@@ -18,6 +18,18 @@
   grid-gap: 16px;
 }
 
+.my-card-deck:hover > .card:not(:hover) {
+    filter: blur(4px);
+    background: rgba(50, 50, 50,0.5);
+    img {
+      filter: brightness(50%);
+    }
+  }
+
+.card-shadow {
+  box-shadow: 1px 1px 12px 4px rgba(100, 100, 100, .2);
+}
+
 .banner {
   margin-left: calc(-100vw / 2 + 1110px / 2);
   margin-right: calc(-100vw / 2 + 1110px / 2);
