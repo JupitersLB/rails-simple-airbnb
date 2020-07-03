@@ -14,15 +14,17 @@
     <div class="card margin-top-negative light-boxshadow">
       <div class="card-body text-left">
         <h3>Details</h3>
-        <p><%= @flat.number_of_guests %></p>
-        <p><%= @flat.price_per_night %></p>
+        <div class="row align-middle justify-content-around">
+          <p class="card-text"><i class="fas fa-user mr-1"></i><%= @flat.number_of_guests %></p>
+          <p class="card-text"><i class="fas fa-usd"></i><%= @flat.price_per_night %></p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-8">
-    <div class="card mt-n4 light-boxshadow">
+    <div class="card mt-3 light-boxshadow">
       <div class="card-body text-left">
         <h3>A bit more about this flat...</h3>
         <p><%= @flat.description %></p>
@@ -31,4 +33,4 @@
   </div>
 </div>
 
-
+<div id="map" style="height: 600px; width: 1200px"></div>

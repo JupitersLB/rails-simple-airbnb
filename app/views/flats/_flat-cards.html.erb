@@ -3,13 +3,13 @@
       <div class="card card-shadow">
         <img src="<%= flat.picture_url %>" class="card-img-top" alt="house">
         <div class="card-content">
-          <div class="card-body">
+          <div class="card-body align-items-center">
             <h5 class="card-title"><%= flat.name %></h5>
             <p class="card-text"><%= flat.address %></p>
-            <i class="material-icons mr-2">people</i>
-            <p class="card-text"><%= flat.number_of_guests %></p>
-            <i class="material-icons mr-2">euro_symbol</i>
-            <p class="card-text"><%= flat.price_per_night %></p>
+            <div class="row align-middle justify-content-around">
+              <p class="card-text"><i class="fas fa-user mr-1"></i><%= flat.number_of_guests %></p>
+              <p class="card-text"><i class="fas fa-usd"></i><%= flat.price_per_night %></p>
+            </div>
           </div>
           <div class="card-footer">
             <%= link_to 'More info', flat_path(flat), class: 'btn btn-outline-dark' %>
